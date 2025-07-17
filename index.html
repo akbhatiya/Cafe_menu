@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Café Menu | Sample QR Experience</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fdf9f6;
+      color: #333;
+    }
+    header {
+      background: #7b3f00;
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
+    }
+    .menu-section {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    .category {
+      margin-bottom: 2rem;
+    }
+    .category h2 {
+      border-bottom: 3px solid #7b3f00;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      color: #7b3f00;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .item {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      background: #fff;
+      border-radius: 8px;
+      margin-bottom: 0.75rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease;
+      position: relative;
+    }
+    .item:hover {
+      transform: scale(1.01);
+    }
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .item-name {
+      font-weight: 500;
+    }
+    .item-price {
+      font-weight: bold;
+    }
+    .description {
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 0.3rem;
+    }
+    .size-select {
+      margin-top: 0.5rem;
+      width: fit-content;
+      font-size: 0.9rem;
+      padding: 0.3rem;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #eee;
+      color: #555;
+    }
+    @media (max-width: 600px) {
+      .item-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Bean & Bite Café</h1>
+    <p>Crafted Delights | Fresh Brews | Friendly Vibes</p>
+  </header>
+
+  <section class="menu-section">
+    <div class="category">
+      <h2><i class="fas fa-mug-hot"></i> Beverages</h2>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Classic Cappuccino</span>
+          <span class="item-price">From ₹99</span>
+        </div>
+        <div class="description">Smooth espresso with frothed milk</div>
+        <select class="size-select">
+          <option>Small - ₹99</option>
+          <option>Medium - ₹119</option>
+          <option>Large - ₹139</option>
+        </select>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Hazelnut Cold Brew</span>
+          <span class="item-price">From ₹129</span>
+        </div>
+        <div class="description">Cold brew with nutty hazelnut flavor</div>
+        <select class="size-select">
+          <option>Regular - ₹129</option>
+          <option>Large - ₹149</option>
+        </select>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Choco Mocha Shake</span>
+          <span class="item-price">From ₹139</span>
+        </div>
+        <div class="description">Creamy chocolate with espresso punch</div>
+        <select class="size-select">
+          <option>Regular - ₹139</option>
+          <option>Large - ₹159</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="category">
+      <h2><i class="fas fa-pizza-slice"></i> Pizzas</h2>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Margherita Delight</span>
+          <span class="item-price">From ₹169</span>
+        </div>
+        <div class="description">Classic cheese and tomato base</div>
+        <select class="size-select">
+          <option>Personal - ₹169</option>
+          <option>Regular - ₹219</option>
+          <option>Large - ₹269</option>
+        </select>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Farmhouse Veggie Pizza</span>
+          <span class="item-price">From ₹189</span>
+        </div>
+        <div class="description">Loaded with capsicum, corn, onions, olives</div>
+        <select class="size-select">
+          <option>Personal - ₹189</option>
+          <option>Regular - ₹239</option>
+          <option>Large - ₹289</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="category">
+      <h2><i class="fas fa-bread-slice"></i> Snacks</h2>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Cheese Garlic Bread</span>
+          <span class="item-price">₹99</span>
+        </div>
+        <div class="description">Toasted bread with garlic butter and cheese</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Masala Fries</span>
+          <span class="item-price">₹89</span>
+        </div>
+        <div class="description">Crispy fries sprinkled with Indian spices</div>
+      </div>
+    </div>
+
+    <div class="category">
+      <h2><i class="fas fa-ice-cream"></i> Desserts</h2>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Choco Lava Cake</span>
+          <span class="item-price">₹119</span>
+        </div>
+        <div class="description">Warm chocolate cake with molten center</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Oreo Cream Jar</span>
+          <span class="item-price">₹109</span>
+        </div>
+        <div class="description">Crushed oreo layers with whipped cream</div>
+      </div>
+    </div>
+
+    <div class="category">
+      <h2><i class="fas fa-box"></i> Combos</h2>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Coffee & Muffin Combo</span>
+          <span class="item-price">₹179</span>
+        </div>
+        <div class="description">Regular Cappuccino + Fresh Chocolate Muffin</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Pizza & Shake Combo</span>
+          <span class="item-price">₹269</span>
+        </div>
+        <div class="description">Personal Margherita + Choco Mocha Shake</div>
+      </div>
+    </div>
+  </section>
+
+ <footer>
+    <p>&copy; 2025 Bean & Bite Café. All rights reserved.</p>
+    <p>Powered by QR Menu Tech | Designed for simplicity & speed</p>
+    <div class="icons">
+      <i class="fa-solid fa-mug-hot"></i>
+      <i class="fa-solid fa-pizza-slice"></i>
+      <i class="fa-solid fa-ice-cream"></i>
+      <i class="fa-solid fa-utensils"></i>
+    </div>
+  </footer>
+</body>
+</html>
